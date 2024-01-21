@@ -23,7 +23,7 @@ public class CartServlet extends HttpServlet {
         String userId = (String) session.getAttribute("userID");
         if (userId == null) {
             // 유저가 로그인하지 않았을 경우 로그인 페이지로 리디렉션
-            response.sendRedirect("login.jsp");
+            response.sendRedirect(request.getContextPath() + "/LoginServlet");
             return;
         }
 
